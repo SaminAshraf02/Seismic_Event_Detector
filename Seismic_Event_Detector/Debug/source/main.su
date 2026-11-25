@@ -1,2 +1,3 @@
-../source/main.c:17:13:delay	16	static
-../source/main.c:22:5:main	8	static
+../source/main.c:20:13:print_s32	40	static
+../source/main.c:38:13:print_mg	24	static
+../source/main.c:50:5:main	56	static

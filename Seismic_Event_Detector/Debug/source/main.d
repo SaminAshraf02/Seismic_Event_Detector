@@ -21,7 +21,8 @@ source/main.o source/main.d: ../source/main.c \
  /Users/saminashraf/Documents/MCUXpressoIDE_25.6.136/workspace_project/Seismic_Event_Detector/utilities/fsl_debug_console.h \
  /Users/saminashraf/Documents/MCUXpressoIDE_25.6.136/workspace_project/Seismic_Event_Detector/component/serial_manager/fsl_component_serial_manager.h \
  /Users/saminashraf/Documents/MCUXpressoIDE_25.6.136/workspace_project/Seismic_Event_Detector/component/serial_manager/fsl_component_serial_port_uart.h \
- /Users/saminashraf/Documents/MCUXpressoIDE_25.6.136/workspace_project/Seismic_Event_Detector/component/uart/fsl_adapter_uart.h
+ /Users/saminashraf/Documents/MCUXpressoIDE_25.6.136/workspace_project/Seismic_Event_Detector/component/uart/fsl_adapter_uart.h \
+ ../source/adxl345.h
 /Users/saminashraf/Documents/MCUXpressoIDE_25.6.136/workspace_project/Seismic_Event_Detector/board/board.h:
 /Users/saminashraf/Documents/MCUXpressoIDE_25.6.136/workspace_project/Seismic_Event_Detector/board/clock_config.h:
 /Users/saminashraf/Documents/MCUXpressoIDE_25.6.136/workspace_project/Seismic_Event_Detector/drivers/fsl_common.h:
@@ -45,3 +46,4 @@ source/main.o source/main.d: ../source/main.c \
 /Users/saminashraf/Documents/MCUXpressoIDE_25.6.136/workspace_project/Seismic_Event_Detector/component/serial_manager/fsl_component_serial_manager.h:
 /Users/saminashraf/Documents/MCUXpressoIDE_25.6.136/workspace_project/Seismic_Event_Detector/component/serial_manager/fsl_component_serial_port_uart.h:
 /Users/saminashraf/Documents/MCUXpressoIDE_25.6.136/workspace_project/Seismic_Event_Detector/component/uart/fsl_adapter_uart.h:
+../source/adxl345.h:
