@@ -4,6 +4,7 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../source/adxl345.c \
 ../source/main.c \
 ../source/semihost_hardfault.c 
 
@@ -11,23 +12,18 @@ S_SRCS += \
 ../source/leds.s 
 
 C_DEPS += \
+./source/adxl345.d \
 ./source/main.d \
 ./source/semihost_hardfault.d 
 
 OBJS += \
+./source/adxl345.o \
 ./source/leds.o \
 ./source/main.o \
 ./source/semihost_hardfault.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes
-source/%.o: ../source/%.s source/subdir.mk
-	@echo 'Building file: $<'
-	@echo 'Invoking: MCU Assembler'
-	arm-none-eabi-gcc -c -x assembler-with-cpp -D__REDLIB__ -I"/Users/saminashraf/Documents/MCUXpressoIDE_25.6.136/workspace_project/Seismic_Event_Detector/board" -I"/Users/saminashraf/Documents/MCUXpressoIDE_25.6.136/workspace_project/Seismic_Event_Detector/source" -g3 -gdwarf-4 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -o "$@" "$<"
-	@echo 'Finished building: $<'
-	@echo ' '
-
 source/%.o: ../source/%.c source/subdir.mk
 	@echo 'Building file: $<'
 	@echo 'Invoking: MCU C Compiler'
@@ -35,11 +31,18 @@ source/%.o: ../source/%.c source/subdir.mk
 	@echo 'Finished building: $<'
 	@echo ' '
 
+source/%.o: ../source/%.s source/subdir.mk
+	@echo 'Building file: $<'
+	@echo 'Invoking: MCU Assembler'
+	arm-none-eabi-gcc -c -x assembler-with-cpp -D__REDLIB__ -I"/Users/saminashraf/Documents/MCUXpressoIDE_25.6.136/workspace_project/Seismic_Event_Detector/board" -I"/Users/saminashraf/Documents/MCUXpressoIDE_25.6.136/workspace_project/Seismic_Event_Detector/source" -g3 -gdwarf-4 -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -D__REDLIB__ -specs=redlib.specs -o "$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
 
 clean: clean-source
 
 clean-source:
-	-$(RM) ./source/leds.o ./source/main.d ./source/main.o ./source/semihost_hardfault.d ./source/semihost_hardfault.o
+	-$(RM) ./source/adxl345.d ./source/adxl345.o ./source/leds.o ./source/main.d ./source/main.o ./source/semihost_hardfault.d ./source/semihost_hardfault.o
 
 .PHONY: clean-source
 

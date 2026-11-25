@@ -6,7 +6,7 @@
  * Generated linker script file for MK64FN1M0xxx12
  * Created from linkscript.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.30
- * MCUXpresso IDE v25.6 [Build 136] [2025-06-27] on Nov. 24, 2026, 5:32:20 p.m.
+ * MCUXpresso IDE v25.6 [Build 136] [2025-06-27] on Nov. 25, 2026, 4:51:31 p.m.
  */
 
 INCLUDE "Seismic_Event_Detector_Debug_library.ld"
